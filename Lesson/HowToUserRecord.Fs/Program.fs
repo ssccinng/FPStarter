@@ -12,6 +12,7 @@ type Book = {
     Pages: Page list
 }
 
+
 let authors =  (List.init 6 (fun _ -> "Scixing"))
                @ (List.init 6 (fun _ -> "Moob"))
                @ (List.init 6 (fun _ -> "BoredYear"))
@@ -34,6 +35,9 @@ module Tools =
         {book with Title = symbol + book.Title + symbol}
         
 open Tools
+books |> List.map Tools.addTailPage
+      |> List.iter (printfn "%A")
+
 
 books |> List.map Tools.addTailPage
       |> List.iter (printfn "%A")
