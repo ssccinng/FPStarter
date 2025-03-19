@@ -23,7 +23,8 @@ type SwissTournament = {
 }
 
 let aa = try { Id = "1"; Score = 1; ForceLunkong = false; PlayedAgainst = [] } with | ex -> failwithf "Error: %s" ex.Message
-
+let a = [Some 1; None; Some 1]
+a |> Option.Tra
 module SwissTool =
     let filiterLunkong (players: SwissPlayer list) = 
         players |> List.filter (fun x -> x.ForceLunkong = false)

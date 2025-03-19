@@ -1,0 +1,19 @@
+﻿Option<T> = None | Some(T)
+
+(Option<T>, (T -> R)) -> Option<R>
+(IEnumerable<T>, (T -> R)) -> IEnumerable<R>
+Map: (C<T>, (T -> R)) -> C<R>
+ 函子（functor)
+ 
+ 
+ (Option<T>, (T -> Option<R>)) -> Option<R>
+ (IEnumerable<T>, (T -> IEnumerable<R>)) -> IEnumerable<R>
+ 
+ Bind: (C<T>, (T -> C<R>)) -> C<R>
+ Return: T -> C<T>
+ 单子（Monad）
+ 
+ 1. bind可以直接用来连接两个输出抽象值的函数，请试着实现一下
+ 2. 单子一定是一个函子
+ 3. Option总是提升到IEnumerable
+ 4. IEnumerable的Return是如何编写的？
