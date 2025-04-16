@@ -10,3 +10,4 @@ var b = a.Zip(a.Skip(1), (x, y) => (x, y)).Subscribe(onNext: s =>
 });
 
 
+

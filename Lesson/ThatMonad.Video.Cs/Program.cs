@@ -4,8 +4,12 @@ var markhello = hello.Map(s => s + "1").Map(s => s + "1");
 Console.WriteLine(markhello.Match(Some: s => s, () => "None"));
 Console.WriteLine(markhello.Map(s => s.Length).Match(Some: s => s, () => 0));
 int[] arr= { 1, 2, 3, 4, 5 };
-arr.Select(s => s * 2);
+arr
+    .Select(s => s * 2)
+    .Select(s => s * 2)
+    .Select(s => s * 2);
 var arrDouble = arr.SelectMany(s => new [] { s * 2 });
+
 
 Console.WriteLine(string.Join(", ", arrDouble));
 

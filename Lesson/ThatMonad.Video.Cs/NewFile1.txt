@@ -17,3 +17,6 @@ Map: (C<T>, (T -> R)) -> C<R>
  2. 单子一定是一个函子
  3. Option总是提升到IEnumerable
  4. IEnumerable的Return是如何编写的？
+ 
+bind:  (Either<L, R>, (R -> Either<L, R1>)) -> Either<L, R1>
+map:  (Either<L, R>, (R -> R1)) -> Either<L, R1>
